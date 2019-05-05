@@ -113,7 +113,7 @@
 				</executions>
 				<configuration>
 					<serverId>docker-aliyun</serverId>
-					<registryUrl>registry.cn-hangzhou.aliyuncs.com</registryUrl>
+					<registryUrl>registry.cn-beijing.aliyuncs.com</registryUrl>
 					<!-- <forceTags>true</forceTags> -->
 					<pushImage>false</pushImage>
 				    <dockerDirectory>target/docker</dockerDirectory>
