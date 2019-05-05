@@ -113,9 +113,9 @@
 			     	<imageName>
         				${docker.repostory}/${docker.registry.name}/${project.artifactId}:${project.version}
     				</imageName>
-    				<imageTags>
+ <!--    				<imageTags>
     					<imageTag>0.0.1</imageTag>
-    				</imageTags>
+    				</imageTags> -->
     				<resources>
 						<rescource><!-- 将打包文件放入dockerDirectory指定的位置 -->
                    			<targetPath>/</targetPath>
