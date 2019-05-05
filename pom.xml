@@ -18,7 +18,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 
-<!-- 	<distributionManagement>
+ 	<distributionManagement>
 		<repository>
 			<id>nexus-releases</id>
 			<name>Nexus Release Repository</name>
@@ -29,7 +29,7 @@
 			<name>Nexus Snapshot Repository</name>
 			<url>http://42.96.194.173:8081/nexus/content/repositories/snapshots</url>
 		</snapshotRepository>
-	</distributionManagement> -->
+	</distributionManagement>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -83,12 +83,6 @@
 				<artifactId>docker-maven-plugin</artifactId>
 				<version>0.4.13</version>
 				<executions>
-				    <execution>
-				        <phase>package</phase>
-				        <goals>
-				            <goal>build</goal>
-				        </goals>
-				    </execution>
 				    <execution>
 						<id>tag-image</id>
 						<phase>package</phase>
