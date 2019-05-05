@@ -114,8 +114,7 @@
         				${docker.repostory}/${docker.registry.name}/${project.artifactId}:${project.version}
     				</imageName>
     				<imageTags>
-    					<imageTag>${git.commit.id.abbrev}</imageTag>
-    					<imageTag>latest</imageTag>
+    					<imageTag>0.0.1</imageTag>
     				</imageTags>
     				<resources>
 						<rescource><!-- 将打包文件放入dockerDirectory指定的位置 -->
