@@ -18,7 +18,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 
- 	<distributionManagement>
+<!--  	<distributionManagement>
 		<repository>
 			<id>nexus-releases</id>
 			<name>Nexus Release Repository</name>
@@ -29,13 +29,13 @@
 			<name>Nexus Snapshot Repository</name>
 			<url>http://42.96.194.173:8081/nexus/content/repositories/snapshots</url>
 		</snapshotRepository>
-	</distributionManagement>
+	</distributionManagement> -->
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
-		<docker.repostory>registry.cn-beijing.aliyuncs.com/tomzhan/test</docker.repostory>
-		<docker.registry.name>viiso</docker.registry.name>
+		<docker.repostory>registry.cn-beijing.aliyuncs.com</docker.repostory>
+		<docker.registry.name>tomzhan</docker.registry.name>
 	</properties>
 
 	<dependencies>
@@ -107,7 +107,7 @@
 				</executions>
 				<configuration>
 					<serverId>docker-aliyun</serverId>
-					<registryUrl>registry.cn-beijing.aliyuncs.com</registryUrl>
+					<registryUrl>${docker.repostory}</registryUrl>
 					<pushImage>true</pushImage>
 				    <dockerDirectory>target/docker</dockerDirectory>
 			     	<imageName>
