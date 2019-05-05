@@ -108,8 +108,7 @@
 				<configuration>
 					<serverId>docker-aliyun</serverId>
 					<registryUrl>registry.cn-beijing.aliyuncs.com</registryUrl>
-					<!-- <forceTags>true</forceTags> -->
-					<pushImage>false</pushImage>
+					<pushImage>true</pushImage>
 				    <dockerDirectory>target/docker</dockerDirectory>
 			     	<imageName>
         				${docker.repostory}/${docker.registry.name}/${project.artifactId}:${project.version}
