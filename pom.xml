@@ -18,7 +18,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 
-<!--  	<distributionManagement>
+<!-- 	<distributionManagement>
 		<repository>
 			<id>nexus-releases</id>
 			<name>Nexus Release Repository</name>
@@ -84,6 +84,12 @@
 				<version>0.4.13</version>
 				<executions>
 				    <execution>
+				        <phase>package</phase>
+				        <goals>
+				            <goal>build</goal>
+				        </goals>
+				    </execution>
+				    <execution>
 						<id>tag-image</id>
 						<phase>package</phase>
 						<goals>
@@ -107,15 +113,17 @@
 				</executions>
 				<configuration>
 					<serverId>docker-aliyun</serverId>
-					<registryUrl>${docker.repostory}</registryUrl>
+					<registryUrl>registry.cn-hangzhou.aliyuncs.com</registryUrl>
+					<!-- <forceTags>true</forceTags> -->
 					<pushImage>true</pushImage>
 				    <dockerDirectory>target/docker</dockerDirectory>
 			     	<imageName>
         				${docker.repostory}/${docker.registry.name}/${project.artifactId}:${project.version}
     				</imageName>
- <!--    				<imageTags>
-    					<imageTag>0.0.1</imageTag>
-    				</imageTags> -->
+    				<imageTags>
+    					<!-- <imageTag>${git.commit.id.abbrev}</imageTag> -->
+    					<imageTag>latest</imageTag>
+    				</imageTags>
     				<resources>
 						<rescource><!-- 将打包文件放入dockerDirectory指定的位置 -->
                    			<targetPath>/</targetPath>
