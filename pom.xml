@@ -34,7 +34,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
-		<docker.repostory>registry.cn-beijing.aliyuncs.com</docker.repostory>
+		<docker.repostory>registry.cn-beijing.aliyuncs.com/tomzhan/test1</docker.repostory>
 		<docker.registry.name>viiso</docker.registry.name>
 	</properties>
 
